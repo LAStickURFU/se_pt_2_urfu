@@ -4,7 +4,7 @@ import streamlit as st
 
 def shorten_text(original_text):
     summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
-    short_text = summarizer(original_text, max_length=8192, min_length=14, do_sample=False)
+    short_text = summarizer(original_text, max_length=130, min_length=14, do_sample=False)
     return short_text
 
 
